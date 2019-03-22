@@ -1,0 +1,14 @@
+<html>
+   <body>
+   	<form action="http://localhost:5000/nn" method="post">
+     <h2>Solving regression problem with 2-layer neural network</h2>
+     <p>Sample size: <input type="number" name="sampleSize" value="{{sampleSize}}"/></p>
+     <p>Number of input features: <input type="number" name="inputFeatures" value="{{inputFeatures}}"/></p>
+     <!-- <p>Sample size: {{sampleSize}}</p>
+     <p>Input features:{{inputFeatures}}</p> -->
+     <p><input type="submit" value="GO" style="font-size:10em;width:1em"/></p>
+     <img src={{graph}} alt="Chart">
+     <p><b>Test Binary Cross Entropy Loss</b>: {{loss}}</p>
+     <p><b>Test Mean Absolute Percetage Error</b>: {{ mape }}%</p>
+   </body>
+</html>
