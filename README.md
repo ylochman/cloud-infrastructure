@@ -1,6 +1,4 @@
-# apps-Cloud-Infrastructure
-
-This is a homework for the Cloud Inrastructure Course 2019 at UCU
+# Cloud Inrastructure Course 2019 at UCU | Homework
 
 ## Start a service application
 Choose one of two options:
