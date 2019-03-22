@@ -1,7 +1,7 @@
 # Cloud Inrastructure Course 2019 at UCU | Homework
 
 ## Start a service application
-Choose one of two options:
+First choose one of two options:
 
 ### DockerHub
 run `docker run -p 5000:5000 -it --rm ylochman/cloud-infra-hw:latest`
@@ -11,7 +11,7 @@ run `docker run -p 5000:5000 -it --rm ylochman/cloud-infra-hw:latest`
 2. run `docker build -t hw1 .`
 3. run `docker run -p 5000:5000 -it --rm hw1`
 
-Go to `localhost:5000` and follow the instructions
+Then go to `localhost:5000` and follow the instructions
 
 <!-- ### trash -->
 <!-- `docker run -p 5000:5000 -it --rm --entrypoint=/bin/bash hw1` -->
