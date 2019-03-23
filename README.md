@@ -8,18 +8,21 @@
 - [ ] Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів)
 - [ ] Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
 
-## Start a service application
+## Run a service application in a single container
 First choose one of two options:
 
 ### DockerHub
-run `docker run -p 5000:5000 -it --rm ylochman/cloud-infra-hw:latest`
+run `docker run -d -p 5000:5000 --rm ylochman/apps-cloud-infra:latest`
 
 ### GitHub
 1. clone this repository: `git clone https://github.com/ylochman/apps-cloud-infra.git`
-2. run `docker build -t hw1 .`
-3. run `docker run -p 5000:5000 -it --rm hw1`
+2. run `docker build -t ylochman-hw .`
+3. run `docker run -d -p 5000:5000 --rm --name ylochman-cloud-infra ylochman-hw`
 
-Then go to `localhost:5000` and follow the instructions
+
+Then go to `localhost:5000` and follow the instructions.
+
+Eventually run `docker container stop $(docker container ls -f "name=ylochman-cloud-infra" -q)` to stop and remove container.
 
 <!-- ### trash -->
-<!-- `docker run -p 5000:5000 -it --rm --entrypoint=/bin/bash hw1` -->
+<!-- `docker run -p 5000:5000 -it --rm --entrypoint=/bin/bash ylochman-hw` -->
