@@ -1,4 +1,4 @@
-#### HW to-do list
+# Work In Progress (to-do list:)
 - [x] Сервіс та докерфайл
 - [ ] Скрипти YAML для завантаження в Kubernetes
 - [ ] Bash скрипт, який інсталює сервіс в MiniKube автоматично
