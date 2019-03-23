@@ -25,6 +25,8 @@ Eventually run `docker container stop $(docker container ls -f "name=ylochman-cl
 ## Deploy an application onto a Docker Machine Swarm Cluster
 Go to `deploy-docker-machine`
 
+Run `chmod +x ./deploy-app.sh ./stop-app.sh`
+
 To deploy an application run `./deploy-app.sh`
 
 To stop application run `./stop-app.sh`
