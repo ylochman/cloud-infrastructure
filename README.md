@@ -22,5 +22,12 @@ Then go to `localhost:5000` and follow the instructions.
 
 Eventually run `docker container stop $(docker container ls -f "name=ylochman-cloud-infra" -q)` to stop and remove container.
 
+## Deploy an application onto a Docker Machine Swarm Cluster
+Go to `deploy-docker-machine`
+
+To deploy an application run `./deploy-app.sh`
+
+To stop application run `./stop-app.sh`
+
 <!-- ### trash -->
 <!-- `docker run -p 5000:5000 -it --rm --entrypoint=/bin/bash ylochman-hw` -->
