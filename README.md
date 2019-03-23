@@ -1,5 +1,13 @@
 # Cloud Inrastructure Course 2019 at UCU | Homework
 
+### HW to-do list
+- [x] Сервіс та докерфайл
+- [ ] Скрипти YAML для завантаження в Kubernetes
+- [ ] Bash скрипт, який інсталює сервіс в MiniKube автоматично
+- [ ] Kubernetes Readiness check + Liveness check
+- [ ] Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів)
+- [ ] Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
+
 ## Start a service application
 First choose one of two options:
 
