@@ -1,0 +1,35 @@
+version: "3"
+services:
+
+  web:    # a service called `web`
+    image: ylochman/apps-cloud-infra:latest   # Pull the image from the registry.
+    deploy:
+      replicas: 2   # Run 5 instances of that image as `web`
+      resources:
+        limits:   # limiting each one to use, at most,:
+          cpus: "0.8"   # 10% of a single core of CPU time (this could also be e.g. “1.5” to mean 1 and half core for each)
+          memory: 900M   # and 50MB of RAM
+      restart_policy:
+        condition: on-failure   # Immediately restart containers if one fails
+    ports:
+      - "5000:5000"   # Map port 5000 on the host to web’s port 5000.
+    networks:
+      - webnet
+
+  visualizer:   # a service called `visualizer`
+    image: dockersamples/visualizer:stable    # Pull the image from dockersamples
+    ports:
+      - "8080:8080"   # Map port 8080 on the host to visualizer’s port 8080
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"   # Give the `visualizer` access to the host’s socket file for Docker
+    deploy:
+      placement:
+        constraints: [node.role == manager]   # Ensure that this service only ever runs on a swarm manager -- never a worker
+                                              # That’s because this container displays Docker services running on a swarm in a diagram.
+    networks:
+      - webnet
+
+networks:   # Instruct web’s containers to share port 80 via a load-balanced network called webnet.
+  webnet:   # (Internally, the containers themselves publish to web’s port 80 at an ephemeral port.)
+            # 
+            # Define the webnet network with the default settings (which is a load-balanced overlay network).
