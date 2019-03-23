@@ -12,7 +12,7 @@
 First choose one of two options:
 
 ### DockerHub
-run `docker run -d -p 5000:5000 --rm ylochman/apps-cloud-infra:latest`
+1. run `docker run -d -p 5000:5000 --rm --name ylochman-cloud-infra ylochman/apps-cloud-infra:latest`
 
 ### GitHub
 1. clone this repository: `git clone https://github.com/ylochman/apps-cloud-infra.git`
