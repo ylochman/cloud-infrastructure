@@ -11,10 +11,10 @@
 ## Run a service application in a single container
 First choose one of two options:
 
-### DockerHub
+### From Docker Hub
 1. run `docker run -d -p 5000:5000 --rm --name ylochman-cloud-infra ylochman/apps-cloud-infra:latest`
 
-### GitHub
+### From GitHub
 1. clone this repository: `git clone https://github.com/ylochman/apps-cloud-infra.git`
 2. run `docker build -t ylochman-hw .`
 3. run `docker run -d -p 5000:5000 --rm --name ylochman-cloud-infra ylochman-hw`
