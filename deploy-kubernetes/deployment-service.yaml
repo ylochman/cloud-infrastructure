@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ylochman-hw-service
+  labels:
+    run: ylochman-hw
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    run: ylochman-hw
+# {
+#   "kind": "Service",
+#   "apiVersion": "v1",
+#   "metadata": {
+#     "name": "ylochman-hw",
+#     "namespace": "default",
+#     "selfLink": "/api/v1/namespaces/default/services/ylochman-hw",
+#     "uid": "92ec4db1-4f41-11e9-9f11-080027859dbf",
+#     "resourceVersion": "22136",
+#     "creationTimestamp": "2019-03-25T21:04:26Z",
+#     "labels": {
+#       "run": "ylochman-hw"
+#     }
+#   },
+#   "spec": {
+#     "ports": [
+#       {
+#         "protocol": "TCP",
+#         "port": 5000,
+#         "targetPort": 5000,
+#         "nodePort": 30476
+#       }
+#     ],
+#     "selector": {
+#       "run": "ylochman-hw"
+#     },
+#     "clusterIP": "10.104.49.93",
+#     "type": "NodePort",
+#     "sessionAffinity": "None",
+#     "externalTrafficPolicy": "Cluster"
+#   },
+#   "status": {
+#     "loadBalancer": {}
+#   }
+# }

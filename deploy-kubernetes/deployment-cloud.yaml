@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: ylochman-hw
 spec:
-  replicas: 1
   selector:
     matchLabels:
       run: ylochman-hw
+  replicas: 3
   template:
     metadata:
       labels:
@@ -14,19 +14,17 @@ spec:
     spec:
       containers:
       - name: ylochman-hw
-        image: ylochman/apps-cloud-infra:latest
-        # image: ylochman/apps-cloud-infra:local
-        imagePullPolicy: IfNotPresent #Always
+        image: ylochman/apps-cloud-infra
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
-          protocol: TCP
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        # resources:
+        #   requests:
+        #     memory: "64Mi"
+        #     cpu: "250m"
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
         readinessProbe:
           httpGet:
             path: /healthy
