@@ -46,6 +46,8 @@ Here the opions are:
 
 To delete a deployment run `./delete-deploy.sh -m`. Here `-m` is to stop minikube.
 
+---
+
 ### Deployment of an application with Docker Machine
 It was done for practicing
 
