@@ -28,6 +28,7 @@ YAML maps are located there:
 - deployment-cloud.yaml (with Readiness & Liveness check)
 - deployment-local.yaml (with Readiness & Liveness check)
 - deployment-service.yaml
+- deployment-autoscaling.yaml
 
 Run `chmod +x ./create-deploy-cloud.sh ./create-deploy-local.sh ./stop-deploy.sh`
 
