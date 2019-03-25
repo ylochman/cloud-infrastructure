@@ -20,6 +20,12 @@ Then go to `localhost:5000` and follow the instructions. To stop and remove cont
 
 `docker container stop $(docker container ls -f "name=ylochman-cloud-infra" -q)` .
 
+## 2. & 4. YAML maps
+Located in `deploy-kubernetes`:
+- deployment-cloud.yaml (with Readiness & Liveness check)
+- deployment-local.yaml (with Readiness & Liveness check)
+- deployment-service.yaml
+
 ## 3. & 5. Deploy an application with Minikube
 Clone this repository and go to `deploy-kubernetes`
 
