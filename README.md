@@ -1,8 +1,8 @@
 # Work In Progress (to-do list:)
 - [x] Сервіс та докерфайл
-- [ ] Скрипти YAML для завантаження в Kubernetes
+- [x] Скрипти YAML для завантаження в Kubernetes
 - [x] Bash скрипт, який інсталює сервіс в MiniKube автоматично
-- [ ] Kubernetes Readiness check + Liveness check
+- [x] Kubernetes Readiness check + Liveness check
 - [x] Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів)
 - [ ] Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
 
