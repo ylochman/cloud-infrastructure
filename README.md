@@ -44,16 +44,16 @@ Here the opions are:
 
 `-b` - build docker image locally before runing
 
-To stop application run `./stop-depoly.sh -m`. Here `-m` is to stop minikube.
+To delete a deployment run `./delete-deploy.sh -m`. Here `-m` is to stop minikube.
 
-## Deploy an application onto a Docker Machine Swarm Cluster
+### Deployment of an application with Docker Machine
 It was done for practicing
 
 Go to `deploy-docker-machine`
 
 Run `chmod +x ./create-deploy.sh ./stop-deploy.sh`
 
-To deploy an application run `./create-deploy.sh`
+To deploy an application onto a swarm cluster run `./create-deploy.sh`
 
 To stop application run `./stop-deploy.sh`
 
