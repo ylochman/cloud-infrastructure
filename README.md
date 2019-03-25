@@ -20,14 +20,14 @@ Then go to `localhost:5000` and follow the instructions. To stop and remove cont
 
 `docker container stop $(docker container ls -f "name=ylochman-cloud-infra" -q)` .
 
-## 2. & 4. YAML maps
-Located in `deploy-kubernetes`:
+## 2 - 5. Deployment of an application with Minikube
+
+Clone this repository and go to `deploy-kubernetes`
+
+YAML maps are located there:
 - deployment-cloud.yaml (with Readiness & Liveness check)
 - deployment-local.yaml (with Readiness & Liveness check)
 - deployment-service.yaml
-
-## 3. & 5. Deploy an application with Minikube
-Clone this repository and go to `deploy-kubernetes`
 
 Run `chmod +x ./create-deploy-cloud.sh ./create-deploy-local.sh ./stop-deploy.sh`
 
@@ -35,15 +35,15 @@ To deploy an application:
 - from cloud registry run `./create-deploy.sh -m`
 - from local image simply add options `-l` and `-b`:  `./create-deploy.sh -mlb`.
 
-Here: 
+Here the opions are: 
 
-`-m` is to first start minikube
+`-m` - first start minikube
 
-`-l` is to deploy an application from local image
+`-l` - deploy an application from local image
 
-`-b` is to build docker image locally before runing
+`-b` - build docker image locally before runing
 
-To stop application run `./stop-depoly.sh -m`. Here `-m`is to stop minikube.
+To stop application run `./stop-depoly.sh -m`. Here `-m` is to stop minikube.
 
 ## Deploy an application onto a Docker Machine Swarm Cluster
 It was done for practicing
