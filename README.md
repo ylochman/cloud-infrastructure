@@ -30,7 +30,7 @@ YAML maps are located there:
 - deployment-service.yaml
 - deployment-autoscaling.yaml
 
-Run `chmod +x ./create-deploy-cloud.sh ./create-deploy-local.sh ./stop-deploy.sh`
+Run `chmod +x ./create-deploy-cloud.sh ./create-deploy-local.sh ./delete-deploy.sh`
 
 To deploy an application:
 - from cloud registry run `./create-deploy.sh -m`
