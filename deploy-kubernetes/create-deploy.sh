@@ -1,7 +1,7 @@
 #!/bin/sh
 ################################################
 # Description:
-#	Creates Deployment, Service in Minikube
+#	Creates Deployment, Service & Horizontal Pod Autoscaler in Minikube
 # Options:
 # -m 	Start minikube at the begining
 # -l 	Deploy an application from local image
@@ -32,10 +32,10 @@ fi
 kubectl create -f $deploymentFile
 sleep 2
 kubectl create -f deployment-service.yaml
-sleep 5
+sleep 2
 # kubectl create -f metrics-server_deploy_1.8+
-# kubectl create -f deployment-autoscaling.yaml
+kubectl create -f deployment-autoscaling.yaml
 
 # kubectl rollout status deployment.apps/ylochman-hw -w
-
+sleep 5
 echo \> Go to application: $(minikube service ylochman-hw-service --url)
