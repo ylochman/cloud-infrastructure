@@ -1,6 +1,10 @@
 #!/bin/sh
-
-# -m: in the end stop minikube
+################################################
+# Description:
+#	Deletes Deployment, Service in Minikube
+# Options:
+# -m 	Stop minikube at the end
+################################################
 
 kubectl delete services ylochman-hw-service
 kubectl delete deployment ylochman-hw

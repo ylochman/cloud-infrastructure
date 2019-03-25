@@ -1,9 +1,12 @@
 #!/bin/sh
-
+################################################
+# Description:
+#	Creates Deployment, Service in Minikube
 # Options:
-# -m 	Start minikube first
+# -m 	Start minikube at the begining
 # -l 	Deploy an application from local image
 # -b 	Build an image locally before running (can be used only with -l)
+################################################
 
 local=false
 
@@ -30,6 +33,7 @@ kubectl create -f $deploymentFile
 sleep 2
 kubectl create -f deployment-service.yaml
 sleep 5
+# kubectl create -f metrics-server_deploy_1.8+
 # kubectl create -f deployment-autoscaling.yaml
 
 # kubectl rollout status deployment.apps/ylochman-hw -w
