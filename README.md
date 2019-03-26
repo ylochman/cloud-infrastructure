@@ -3,7 +3,7 @@
 - [x] Bash скрипт, який інсталює сервіс в MiniKube автоматично
 - [x] Kubernetes Readiness check + Liveness check
 - [x] Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів)
-- [ ] Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
+- [~] Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
 
 ## 1. An application + Dockerfile
 You can simply run an application in a single container:
@@ -20,7 +20,7 @@ Then go to `localhost:5000` and follow the instructions. To stop and remove cont
 
 `docker container stop $(docker container ls -f "name=ylochman-cloud-infra" -q)` .
 
-## 2 - 5. Deployment of an application with Minikube
+## 2 - 6. Deployment of an application with Minikube
 
 Clone this repository and go to `deploy-kubernetes`
 
