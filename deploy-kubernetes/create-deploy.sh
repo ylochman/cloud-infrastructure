@@ -29,11 +29,13 @@ fi
 # kubectl run ylochman-hw --image=ylochman/apps-cloud-infra:latest --replicas=3 --port=5000 --image-pull-policy=Always
 # kubectl expose deployment ylochman-hw --port=5000 --target-port=5000 --type=LoadBalancer --name=ylochman-hw-service
 
+minikube addons enable metrics-server
+kubectl create -f metrics-server_deploy_1.8+
+
 kubectl create -f $deploymentFile
 sleep 2
 kubectl create -f deployment-service.yaml
 sleep 2
-# kubectl create -f metrics-server_deploy_1.8+
 kubectl create -f deployment-autoscaling.yaml
 
 # kubectl rollout status deployment.apps/ylochman-hw -w
