@@ -1,9 +1,9 @@
-- [x] Сервіс та докерфайл
-- [x] Скрипти YAML для завантаження в Kubernetes
-- [x] Bash скрипт, який інсталює сервіс в MiniKube автоматично
+- [x] Service + Dockerfile
+- [x] YAML scripts for installing into Kubernetes
+- [x] Bash script, that installs the service into MiniKube automatically
 - [x] Kubernetes Readiness check + Liveness check
-- [x] Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів)
-- [~] Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
+- [x] Bash script for local deployment in Minikube (without cloud library of containers)
+- [x] Memory scaling
 
 ## 1. An application + Dockerfile
 You can simply run an application in a single container:
