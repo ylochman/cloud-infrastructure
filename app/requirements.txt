@@ -1,6 +1,6 @@
 Flask==1.0.2
 Redis
-numpy==1.15.4
+numpy==1.22.0
 scipy==1.2.0
 scikit-learn==0.20.2
 matplotlib==3.0.0
